@@ -1,0 +1,9 @@
+<div class="product-card">
+  <img [src]="product.image" [alt]="'img product name' + product.title">
+  <h2>{{product.title | slice: 0 : 40}}</h2>
+  <section>
+    <small>{{product.category}}</small>
+    <p>{{product.price | currency}}</p>
+  </section>
+   <button (click)="addProduct(product)">Buy</button>
+</div>

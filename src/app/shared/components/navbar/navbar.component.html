@@ -1,0 +1,11 @@
+<nav>
+  <img ngSrc="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/55QHEOQRQBEPTF5LRJK57MDEP4.jpg" priority width="50" height="50" alt="user">
+  <div *ngIf="!simple">
+    <input placeholder="search..." [formControl]="control">
+    <fa-icon [icon]="faSearch"></fa-icon>
+  </div>
+  <fa-icon *ngIf="!simple else home" [icon]="faCartShopping" routerLink="/cart"></fa-icon>
+  <ng-template #home>
+    <fa-icon [icon]="faHome" routerLink="/"></fa-icon>
+  </ng-template>
+</nav>

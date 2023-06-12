@@ -1,0 +1,10 @@
+<div class="product-cart">
+  <img [src]="product.image" [alt]="'product name' + product.title">
+  <section>
+    <h2>{{product.title}}</h2>
+    <h2>price: {{product.price | currency}}</h2>
+  </section>
+  <button (click)="deleteProduct.emit()">
+    <fa-icon [icon]="faTrash"></fa-icon>
+  </button>
+</div>

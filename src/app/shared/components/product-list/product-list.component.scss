@@ -1,0 +1,15 @@
+.product-list{
+  padding-block: 3rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 2.5rem 1.5rem;
+  &__empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 30%;
+    }
+  }
+}
