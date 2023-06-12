@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ProductsService} from "../../shared/services/products/products.service";
-import {ProductInterface} from "../../shared/interfaces/products.interface";
+import {ProductsService} from "../../../shared/services/products/products.service";
+import {ProductInterface} from "../../../shared/interfaces/products.interface";
 
 @Component({
   selector: 'app-home',
@@ -14,12 +14,15 @@ export class HomeComponent {
   constructor(
     private productsService: ProductsService
   ) {
-    this.getProducts();
+    this.products = productsService.products;
+    if(!this.products.length){
+      this.getProducts();
+    }
   }
 
 
   private getProducts(): void{
-    this.productsService.products().subscribe({
+    this.productsService.getAllProducts().subscribe({
       next: (response) => {
         this.products = response;
       }

@@ -1,0 +1,33 @@
+<main class="panel">
+  <app-navbar [simple]="true"></app-navbar>
+  <section>
+    <form [formGroup]="formProduct">
+      <h2>Create product</h2>
+      <div>
+        <label for="title">title</label>
+        <input id="title" placeholder="title" formControlName="title">
+      </div>
+      <div>
+        <label for="price">price</label>
+        <input id="price" placeholder="price" type="number" formControlName="price">
+      </div>
+      <div>
+        <label for="image">url image</label>
+        <input id="image" placeholder="image" formControlName="image">
+      </div>
+      <div>
+        <label>Category</label>
+        <select formControlName="category">
+          <option value="clothes">Clothes</option>
+          <option value="technology">Technology</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </div>
+      <div>
+        <label for="description">description</label>
+        <textarea id="description" placeholder="description" formControlName="description" cols="30" rows="10"></textarea>
+      </div>
+      <button (click)="addProduct()">Save</button>
+    </form>
+  </section>
+</main>

@@ -1,0 +1,44 @@
+.login{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-image: url("https://thumbs.dreamstime.com/b/clothing-seamless-texture-background-store-shop-package-black-white-62505760.jpg");
+  span{
+    padding: 3px;
+    border-radius: 2.1rem;
+    background: linear-gradient(to right, red, purple);
+  }
+  div{
+    max-width: 20rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: var(--white);
+    text-align: center;
+    border-radius: 2rem;
+    min-height: 25rem;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    cursor: pointer;
+    transition-duration: 500ms;
+    &:hover{
+      transform: scale(1.02);
+    }
+    img{
+      border-radius: 100%;
+      width: 80%;
+      aspect-ratio: 3/3;
+    }
+    h2{
+      margin-top: 3rem;
+      color: var(--spaceCadet);
+    }
+    p{
+      color: var(--tealBlue);
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ProductInterface} from "../../interfaces/products.interface";
+import {ProductInterface} from "../../../../shared/interfaces/products.interface";
 import {faTrash} from "@fortawesome/free-solid-svg-icons";
 
 @Component({

@@ -1,0 +1,16 @@
+<nav>
+  <section routerLink="/login">
+    <img *ngIf="user?.image else avatarTemplate" [ngSrc]="user.image"
+         priority width="50" height="50" alt="user">
+    <ng-template #avatarTemplate>
+      <fa-icon [icon]="faUserCircle"></fa-icon>
+    </ng-template>
+  </section>
+  <div *ngIf="!simple">
+    <input placeholder="search..." [formControl]="control">
+    <fa-icon [icon]="faSearch"></fa-icon>
+  </div>
+  <span [routerLink]="simple ? '/dashboard/home' : '/dashboard/cart'">
+  <fa-icon [icon]="simple ? faHome : faCartShopping"></fa-icon>
+  </span>
+</nav>
