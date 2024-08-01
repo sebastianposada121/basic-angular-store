@@ -10,6 +10,7 @@ import {ProductInterface} from "../../interfaces/products.interface";
 })
 export class ProductsService implements FakeStoreApiInterface{
 
+  public products: Array<ProductInterface> = new Array<ProductInterface>();
   public productsCar: Array<ProductInterface> = new Array<ProductInterface>();
 
   private urls = {
@@ -20,7 +21,7 @@ export class ProductsService implements FakeStoreApiInterface{
     private httpClient: HttpClient
   ) { }
 
-  public products(): Observable<Array<ProductInterface>> {
+  public getAllProducts(): Observable<Array<ProductInterface>> {
     return this.httpClient.get<Array<ProductInterface>>(this.urls.products);
   }
 

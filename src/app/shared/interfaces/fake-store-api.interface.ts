@@ -1,5 +1,6 @@
 import {Observable} from "rxjs";
+import {ProductInterface} from "./products.interface";
 
 export interface FakeStoreApiInterface {
-  products: () => Observable<any>
+  getAllProducts: () => Observable<Array<ProductInterface>>
 }
